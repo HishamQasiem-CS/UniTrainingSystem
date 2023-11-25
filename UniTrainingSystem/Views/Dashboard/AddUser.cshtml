@@ -1,0 +1,57 @@
+﻿@model AddNewStudentViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/adduserfile/css/stylesheet.css" rel="stylesheet" />
+<script src="~/adduserfile/js/javascript.js"></script>
+
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Add New Student</h3>
+                    <p>Fill in the data below.</p>
+                    <form asp-action="AddUser" asp-controller="Account" method="Post">
+
+                        <div class="col-md-12">
+                            <input asp-for="FullName" class="form-control" type="text" placeholder="Full Name">
+                            <div class="valid-feedback" asp-validation-for="FullName"></div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <input asp-for="Email" class="form-control" type="email" placeholder="E-mail Address">
+                            <div class="valid-feedback" asp-validation-for="Email"></div>
+                        </div>
+
+
+
+
+                        <div class="col-md-12">
+                            <input asp-for="Password" class="form-control" type="text" placeholder="Password">
+                            <div class="valid-feedback" asp-validation-for="Password"></div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="form-button mt-3" style="margin-top:20px;">
+                            <button id="submit" type="submit" class="btn btn-primary">Add User</button>
+                        </div>
+                    </form>
+
+                    <div class="form-button mt-3" style="margin-top:20px;">
+                        <a asp-action="Index" asp-controller="Dashboard" style="color:black; text-decoration:none;" class="btn btn-primary">Back to Dashboard Page</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

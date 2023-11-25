@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TrainingType>
+
+@{
+    Layout = null;
+}
+<style>
+    table {
+        text-align: center;
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+<h3 style="text-align:center; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:5px;">Display Training Type</h3>
+<br />
+<table class="table table-bordered">
+    <tr>
+
+
+        <th>@Html.DisplayNameFor(x=>x.TrainingTypeId)</th>
+        <th>@Html.DisplayNameFor(x=>x.TypeName)</th>
+      
+
+
+        <th>Operations</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TrainingTypeId</td>
+            <td>@item.TypeName</td>
+           
+
+
+            <td>
+                <a asp-action="UpdateTraining" asp-controller="Dashboard" asp-route-id="@item.TrainingTypeId" class="btn btn-primary">Update</a>
+
+                <a asp-action="DeleteTraining" asp-controller="Dashboard" asp-route-id="@item.TrainingTypeId" class="btn btn-danger">Delete </a>
+            </td>
+        </tr>
+
+    }
+    <tr>
+        <td>
+            <a asp-action="Index" asp-controller="Dashboard" class="btn btn-success">Back to Dashboard Page</a>
+
+        </td>
+    </tr>
+
+</table>
+
+

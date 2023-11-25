@@ -1,0 +1,32 @@
+﻿
+<style>
+    .sp1{
+        font-size:20px;
+        font-weight:bold;
+    }
+    .in1{
+        font-size:18px;
+        font-weight:bold;
+    }
+
+   
+</style>
+
+<div class="container" style="margin-top:100px;">
+    <div class="row">
+       <div class="col-md-6">
+           <span class="sp1">Name: </span><br/>
+           <input class="in1" type="text" id="txtuser" /><br/>
+            <span class="sp1">Message : </span><br />
+           <textarea rows="10" cols="50" id="txtMsg"></textarea><br/>
+           <button type="submit" class="btn btn-info"  id="btnSend" style="margin-top:10px;font-weight:bold;">Send</button>
+       </div>
+       <div class="col-md-6">
+            <h3 class="sp1">Message : </h3>
+           <ul id="list" class="alert alert-info"></ul>
+       </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/site.js"></script>
